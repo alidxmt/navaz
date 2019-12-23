@@ -13,6 +13,9 @@
  // create Oscillator node
 
 function benavaz(osc, basamad, shape) {
+    audioCtx.resume().then(() => {
+    });
+    
     osc.type = shape;
     osc.frequency.setValueAtTime(basamad, audioCtx.currentTime); // value in hertz
     osc.connect(audioCtx.destination);
